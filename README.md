@@ -13,7 +13,7 @@ This repository introduces a hybrid regression model for paddock-level crop yiel
     - [1. Transformer Stream](#1-Transformer-stream)
     - [2. MAMBA Stream](#2-MAMBA-stream)
     - [3. Slot Attention Block](#3-Slot-Attention-Block)
-  - [Results and Discussion]
+  - [Results and Discussion](#Results-and-Discussion)
 
 
   ## Introduction
