@@ -10,3 +10,6 @@ This research proposes a novel hybrid regression model for paddock-level crop yi
     - [2.WA Rainfall Paddocks Dataset](#2-WA-Rainfall-Paddocks-Dataset)
     - [3.SHAP Analysis](#3-SHAP-Analysis)
 - [Architecture Overview](#architecture-overview)
+    - [1. Transformer Stream](#1-Transformer-stream)
+    - [2. MAMBA Stream](#2-MAMBA-stream)
+    - [3. Slot Attention Block](#3-Slot-Attention-Block)
