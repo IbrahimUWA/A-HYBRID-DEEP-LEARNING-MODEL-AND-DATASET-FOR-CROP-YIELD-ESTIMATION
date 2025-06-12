@@ -7,7 +7,7 @@ This repository introduces a hybrid regression model for paddock-level crop yiel
 ## 📁 Project Structure
 
 ```
-FA127_AgAnalyticHub/
+A-HYBRID-DEEP-LEARNING-MODEL-AND-DATASET-FOR-CROP-YIELD-ESTIMATION/
 ├── dataset/                    # Contains training_data22.zip, validation_data22.zip
 ├── model/                      # Training pipeline and architecture
 │   └── Yield_Prediction_Model_Paddock_Level_Final.py
