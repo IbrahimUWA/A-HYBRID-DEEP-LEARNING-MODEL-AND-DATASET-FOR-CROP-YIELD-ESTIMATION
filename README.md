@@ -76,8 +76,9 @@ All paddocks are geo-tagged and labeled with rainfall zone, year, and crop type.
 - **Slot Attention**: Dynamic spatial feature grouping
 
 ![Model Architecture](assets/model_architecture_figure.png)
-
+```bash
 Implemented in: `Yield_Prediction_Model_Paddock_Level_Final.py`
+```
 ---
 
 ## 🧪 SHAP Analysis and Feature Importance
@@ -198,7 +199,7 @@ Each script requires:
 | Random Forest      | 84.98       | 0.191 | 33.32                |
 | **Hybrid Model**   | **86.43**   | **0.1788** | **58.69**        |
 
-![Prediction Scatter](assets/prediction_performance.png)
+![Prediction Scatter](assets/prediction_performance.PNG)
 
 - **+6.5% gain in R²** over ResNet50
 - **40% faster inference** compared to deep CNNs
