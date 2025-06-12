@@ -11,6 +11,11 @@ A-HYBRID-DEEP-LEARNING-MODEL-AND-DATASET-FOR-CROP-YIELD-ESTIMATION/
 ├── dataset/
 │   ├── training_data22.zip
 │   └── testing_data22.csv
+├── assets/
+│ ├── wa_dataset_figure.png
+│ ├── model_architecture_figure.png
+│ ├── shap_summary_plot.png
+│ ├── prediction_performance.PNG
 ├── model/
 │   └── Yield_Prediction_Model_Paddock_Level_Final.py
 ├── processing/
@@ -31,10 +36,11 @@ A-HYBRID-DEEP-LEARNING-MODEL-AND-DATASET-FOR-CROP-YIELD-ESTIMATION/
 - [Introduction](#introduction)
 - [Dataset Description](#dataset-description)
 - [Architecture Overview](#architecture-overview)
+- [SHAP Analysis and Features Importance](#shap-analysis-and-features-importance)
+- [Environment Setup](#environment-setup)
+- [Run the Model](#run-the-model)
+- [Run Preprocessing Scripts](#run-preprocessing-scripts)
 - [Requirements](#requirements)
-- [How to Run the Model](#how-to-run-the-model)
-- [How to Run SHAP Analysis](#how-to-run-shap-analysis)
-- [How to Run Data Processing Scripts](#how-to-run-data-processing-scripts)
 - [Results and Discussion](#results-and-discussion)
 
 ---
@@ -58,7 +64,8 @@ We also introduce the Western Australian (WA) Rainfall Paddocks Dataset, a compr
 
 All paddocks are geo-tagged and labeled with rainfall zone, year, and crop type.
 
-![Dataset Overview](https://github.com/IbrahimUWA/A-HYBRID-DEEP-LEARNING-MODEL-AND-DATASET-FOR-CROP-YIELD-ESTIMATION/assets/wa_dataset_figure.png)
+![Dataset Overview](assets/wa_dataset_figure.png)
+
 
 ---
 
@@ -68,19 +75,28 @@ All paddocks are geo-tagged and labeled with rainfall zone, year, and crop type.
 - **MAMBA Stream**: Memory-efficient modeling
 - **Slot Attention**: Dynamic spatial feature grouping
 
-![Model Architecture](https://github.com/IbrahimUWA/A-HYBRID-DEEP-LEARNING-MODEL-AND-DATASET-FOR-CROP-YIELD-ESTIMATION/assets/model_architecture_figure.png)
+![Model Architecture](assets/model_architecture_figure.png)
 
 Implemented in: `Yield_Prediction_Model_Paddock_Level_Final.py`
 ---
 
-## 🔍 SHAP Feature Importance
-
+## 🧪 SHAP Analysis and Feature Importance
 The SHAP analysis identifies the top 20 of 41 features for yield prediction:
 - SOC, rainfall, red/NIR bands, and NDVI are dominant
+  
+```bash
+cd shap_analysis/
+jupyter notebook SHAP-analysis-for-features-selection-yield-prediction.ipynb
+```
+Notebook steps:
+- Load training dataset
+- Train RandomForestRegressor
+- Generate SHAP values
+- Plot feature importance and dependence plots
 
-![SHAP Summary Plot](https://github.com/IbrahimUWA/A-HYBRID-DEEP-LEARNING-MODEL-AND-DATASET-FOR-CROP-YIELD-ESTIMATION/assets/shap_summary_plot.png)
-
+![SHAP Summary Plot](assets/shap_summary_plot.png)
 ---
+
 
 ## ⚙️ Environment Setup
 
@@ -138,19 +154,6 @@ test_on_test_data(test_data_path, model_path, output_path)
 
 ---
 
-## 🧪 SHAP Analysis
-
-```bash
-cd shap_analysis/
-jupyter notebook SHAP-analysis-for-features-selection-yield-prediction.ipynb
-```
-Notebook steps:
-- Load training dataset
-- Train RandomForestRegressor
-- Generate SHAP values
-- Plot feature importance and dependence plots
-
----
 
 ## 🌍 Run Preprocessing Scripts
 ### Folder: `processing/`
@@ -186,7 +189,7 @@ Each script requires:
 
 ---
 
-## 📈 Results
+## 📈 Results and Discussion
 
 | Model               | R² Accuracy | MSE   | Inference Time (µs) |
 |--------------------|-------------|-------|----------------------|
@@ -195,11 +198,11 @@ Each script requires:
 | Random Forest      | 84.98       | 0.191 | 33.32                |
 | **Hybrid Model**   | **86.43**   | **0.1788** | **58.69**        |
 
-![Prediction Scatter](https://github.com/IbrahimUWA/A-HYBRID-DEEP-LEARNING-MODEL-AND-DATASET-FOR-CROP-YIELD-ESTIMATION/assets/prediction_performance.png)
+![Prediction Scatter](assets/prediction_performance.png)
 
 - **+6.5% gain in R²** over ResNet50
 - **40% faster inference** compared to deep CNNs
-- SHAP shows top features: NDVI, rainfall, subsoil pH
+- SHAP shows top features: NDVI, rainfall, Soil Organic Carbon, Albedo, and Silt
 - Excellent generalization across rainfall zones and seasons
 ---
 
