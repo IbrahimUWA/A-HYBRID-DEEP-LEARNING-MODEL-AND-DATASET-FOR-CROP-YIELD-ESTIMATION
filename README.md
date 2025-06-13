@@ -4,6 +4,18 @@ This repository introduces a hybrid regression model for paddock-level crop yiel
 
 ---
 
+## 🎤 Conference Presentation
+
+Our research paper based on this repository has been **accepted for oral presentation at [IGARSS 2025](https://www.2025.ieeeigarss.org/)**.
+
+📍 **Conference:** The 45th IEEE International Geoscience and Remote Sensing Symposium (IGARSS)  
+📅 **Dates:** 3–8 August 2025  
+🌍 **Location:** Brisbane, Australia
+
+> IGARSS is the flagship event of the IEEE Geoscience and Remote Sensing Society (GRSS), bringing together scientists, engineers, and industry leaders working in Earth observation and remote sensing technologies.
+
+---
+
 ## 📁 Project Structure
 
 ```
@@ -24,9 +36,11 @@ A-HYBRID-DEEP-LEARNING-MODEL-AND-DATASET-FOR-CROP-YIELD-ESTIMATION/
 │   └── Script_For_Downloading_Sentinel-2-Raster.ipynb
 ├── shap_analysis/
 │   └── SHAP-analysis-for-features-selection-yield-prediction.ipynb
+├── Final_paper_accepted_version_IGARRS 2025.pdf
 ├── README.md
-├── requirements.txt
 └── environment.yml
+├── requirements.txt
+
 ```
 
 ---
@@ -40,7 +54,6 @@ A-HYBRID-DEEP-LEARNING-MODEL-AND-DATASET-FOR-CROP-YIELD-ESTIMATION/
 - [Environment Setup](#environment-setup)
 - [Run the Model](#run-the-model)
 - [Run Preprocessing Scripts](#run-preprocessing-scripts)
-- [Requirements](#requirements)
 - [Results and Discussion](#results-and-discussion)
 
 ---
@@ -213,3 +226,4 @@ Each script requires:
 **Muhammad Ibrahim**  
 Adjunct Research Fellow – UWA / DPIRD WA  
 📧 muhammad.ibrahim@dpird.wa.gov.au
+
