@@ -224,6 +224,6 @@ Each script requires:
 ## 📮 Contact
 
 **Muhammad Ibrahim**  
-Adjunct Research Fellow – UWA / DPIRD WA  
+Research Scientist DPIRD WA and Adjunct Research Fellow – UWA 
 📧 muhammad.ibrahim@dpird.wa.gov.au
 
