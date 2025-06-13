@@ -1,4 +1,4 @@
-# A HYBRID DEEP LEARNING MODEL AND DATASET FOR PADDOCK-LEVEL CROP YIELD ESTIMATION
+# A SPATIAL HYBRID MODEL FOR CROP YIELD PREDICTION IN WESTERN AUSTRALIA
 
 This repository introduces a hybrid regression model for paddock-level crop yield prediction, combining MAMBA blocks, Transformer attention, and Slot Attention to capture spatial and temporal complexities. By leveraging soil, weather, and Sentinel-2 data, the model improves predictive accuracy. Additionally, the Western Australian (WA) Rainfall Paddocks Dataset, encompassing soil, climate, and satellite data for ~450,000 paddocks over three years, is presented as a resource for high-resolution and large-scale modeling. The proposed model outperforms classical machine learning and ResNet50 in accuracy and inference speed, establishing itself as an efficient solution for precision agriculture.
 
